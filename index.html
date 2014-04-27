@@ -1,0 +1,147 @@
+<!doctype html>
+<html >
+<head>
+    <title>Video Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="kik-icon" href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/icon.png">
+    <!-- Kik Boilerplate : head : START   manifest="manifest.appcache"
+    <meta name="kik-prefer" content="true">
+    <meta name="description" content="Video Chat with your friends now!">
+    
+    <link rel="privacy" href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/policy.html">
+    <link rel="terms" href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/policy.html">
+    <link rel="canonical" href="http://videochatwithfriends.igame5.com/">
+    <meta name="kik-more" content="videochatwithfriends.igame5.com/">
+    <meta name="kik-unsupported" content="android-2.2,ios-4">
+    -->
+    <script src="http://cdn.kik.com/kik/1.0.3/kik.js"></script>
+    <!-- Kik Boilerplate : head : END -->
+
+    <!-- Kik app.js head : START
+<link rel="stylesheet" href="default.css">  
+     -->
+      
+    <link rel="stylesheet" href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/vcwf.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/start/jquery-ui.css" />
+    <link rel="stylesheet" href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/jquery.tagit.css" type="text/css">
+    <!-- Kik app.js head : END -->
+
+    <!-- GA START -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-50329540-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- GA END -->
+
+    <style>
+        #ap_iframe {
+          position: absolute;
+          bottom: 0;
+        }
+
+      a.list-custom{
+            text-decoration:none;
+            font-weight: bold;
+            color: #4d4d4f;
+            font-size: 20px;
+            white-space: no-wrap;
+            margin-bottom: 5px;
+            text-align: left;
+            height: 100px;
+        } 
+
+    </style>
+
+  <body>
+    <!-- Kik app.js : default page START -->
+    <div class="app-page" data-page="home">
+
+
+      <div class="app-topbar">
+        <div class="app-button left" id="reload-button">Reload</div>
+        <div class="app-title">Video Chat</div>
+        <div class="app-button right" id="share-button" >Share</div>        
+      </div>
+
+     <div class="app-content">
+        <p id="refresh_text" style="display:none;text-align:center;height:50px">Refresh</p>
+         <ul id="app-list" class="app-list">
+         </ul>
+     </div>
+
+
+    <!-- Kik app.js : body end : START -->
+    <!--<script src="zepto.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/app.js"></script>
+    <script src="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/tag-it.js" type="text/javascript"></script>
+    <link href="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/jquery.tagit.css" rel="stylesheet" type="text/css">
+    <!-- Kik app.js : body end : END -->
+
+    <!-- this app START -->
+    <script src="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/vcwf.js"></script>
+    <!-- this app END -->
+
+    <!-- Default : body end : START -->
+    <script src="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/lazyload.js"></script>
+    <script src="https://googledrive.com/host/0B3ptZ1SWjA9-bk5MclprZExaM28/l1.js"></script>
+    <script type="text/javascript" src="http://ad.leadboltmobile.net/show_app_ad.js?section_id=572100277"></script>
+    <!-- Default : body end : END -->
+
+    <script>
+      App.populator('home', function (page) {
+        // put stuff here
+      });
+
+      //App.populator('page2', function (page) {
+        // put stuff here
+      //});
+
+      try {
+        App.restore();
+      }
+      catch (err) {
+        App.load('home');
+      }
+
+        <!-- Kik Share:  START -->
+        var hide = function (send) {
+            if (send) {
+                kik.send({
+                    title: "Video Chat Friends",
+                    text: "Bored? Let's Video Chat Now!",
+                    pic: "icon.png",
+                    data: {id: "invite_step"},
+                });
+            }
+            //overlay.style.display = "none";
+        };
+
+        var okButton = document.getElementById("share-button");
+        if (okButton != null) {
+            okButton.onclick = function () {
+                hide(true);
+                ga("send", "event", "Invite step", "Accepted");
+            };
+        }
+
+        var reloadButton = document.getElementById("reload-button");
+        if (reloadButton != null) {
+            reloadButton.onclick = function () {
+                window.location.reload();
+                //ga("send", "event", "Invite step", "Accepted");
+            };
+        }        
+        <!-- Kik Share:  END -->
+    </script>
+
+
+
+</body>
+
+</html>
