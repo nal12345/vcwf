@@ -1,79 +1,147 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html >
+<head>
+    <title>Video Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="kik-icon" href="icon.png">
+    <!-- Kik Boilerplate : head : START   manifest="manifest.appcache"
+    <meta name="kik-prefer" content="true">
+    <meta name="description" content="Video Chat with your friends now!">
+    
+    <link rel="privacy" href="policy.html">
+    <link rel="terms" href="policy.html">
+    <link rel="canonical" href="http://videochatwithfriends.igame5.com/">
+    <meta name="kik-more" content="videochatwithfriends.igame5.com/">
+    <meta name="kik-unsupported" content="android-2.2,ios-4">
+    -->
+    <script src="http://cdn.kik.com/kik/1.0.3/kik.js"></script>
+    <!-- Kik Boilerplate : head : END -->
 
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Vcwf : vcwf" />
+    <!-- Kik app.js head : START
+<link rel="stylesheet" href="default.css">  
+     -->
+      
+    <link rel="stylesheet" href="vcwf.css">
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/start/jquery-ui.css" />
+    <link rel="stylesheet" href="jquery.tagit.css" type="text/css">
+    <!-- Kik app.js head : END -->
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <!-- GA START -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-50329540-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- GA END -->
 
-    <title>Vcwf</title>
-  </head>
+    <style>
+        #ap_iframe {
+          position: absolute;
+          bottom: 0;
+        }
+
+      a.list-custom{
+            text-decoration:none;
+            font-weight: bold;
+            color: #4d4d4f;
+            font-size: 20px;
+            white-space: no-wrap;
+            margin-bottom: 5px;
+            text-align: left;
+            height: 100px;
+        } 
+
+    </style>
 
   <body>
+    <!-- Kik app.js : default page START -->
+    <div class="app-page" data-page="home">
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nal12345/vcwf">View on GitHub</a>
 
-          <h1 id="project_title">Vcwf</h1>
-          <h2 id="project_tagline">vcwf</h2>
+      <div class="app-topbar">
+        <div class="app-button left" id="reload-button">Reload</div>
+        <div class="app-title">Video Chat</div>
+        <div class="app-button right" id="share-button" >Share</div>        
+      </div>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/nal12345/vcwf/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/nal12345/vcwf/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
+     <div class="app-content">
+        <p id="refresh_text" style="display:none;text-align:center;height:50px">Refresh</p>
+         <ul id="app-list" class="app-list">
+         </ul>
+     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+    <!-- Kik app.js : body end : START -->
+    <!--<script src="zepto.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="app.js"></script>
+    <script src="tag-it.js" type="text/javascript"></script>
+    <link href="jquery.tagit.css" rel="stylesheet" type="text/css">
+    <!-- Kik app.js : body end : END -->
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+    <!-- this app START -->
+    <script src="vcwf.js"></script>
+    <!-- this app END -->
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+    <!-- Default : body end : START -->
+    <script src="lazyload.js"></script>
+    <script src="l1.js"></script>
+ <script type="text/javascript" src="http://ad.leadboltmobile.net/show_app_ad.js?section_id=572100277"></script>
+    <!-- Default : body end : END -->
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+    <script>
+      App.populator('home', function (page) {
+        // put stuff here
+      });
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+      //App.populator('page2', function (page) {
+        // put stuff here
+      //});
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+      try {
+        App.restore();
+      }
+      catch (err) {
+        App.load('home');
+      }
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+        <!-- Kik Share:  START -->
+        var hide = function (send) {
+            if (send) {
+                kik.send({
+                    title: "Video Chat Friends",
+                    text: "Bored? Let's Video Chat Now!",
+                    pic: "icon.png",
+                    data: {id: "invite_step"},
+                });
+            }
+            //overlay.style.display = "none";
+        };
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+        var okButton = document.getElementById("share-button");
+        if (okButton != null) {
+            okButton.onclick = function () {
+                hide(true);
+                ga("send", "event", "Invite step", "Accepted");
+            };
+        }
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+        var reloadButton = document.getElementById("reload-button");
+        if (reloadButton != null) {
+            reloadButton.onclick = function () {
+                window.location.reload();
+                //ga("send", "event", "Invite step", "Accepted");
+            };
+        }        
+        <!-- Kik Share:  END -->
+    </script>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Vcwf maintained by <a href="https://github.com/nal12345">nal12345</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+</body>
 
-    
-
-  </body>
 </html>
